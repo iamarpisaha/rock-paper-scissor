@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="game-container winner">
+      <h1>Rock Paper Scissors</h1>
+
+      <div class="score-board">
+        <div class="score">
+          <h2>Player</h2>
+          <div class="score-value" id="player-score">0</div>
+        </div>
+        <div class="score">
+          <h2>Computer</h2>
+          <div class="score-value" id="computer-score">0</div>
+        </div>
+      </div>
+
+      <div class="selections">
+        <div class="selection-box" id="player-selection-box">
+          <h3>Your Choice</h3>
+          <div class="selection-icon" id="player-choice">❔</div>
+        </div>
+        <div class="selection-box" id="computer-selection-box">
+          <h3>Computer</h3>
+          <div class="selection-icon" id="computer-choice">❔</div>
+        </div>
+      </div>
+
+      <div class="result">
+        <p class="result-text">Choose your weapon!</p>
+      </div>
+
+      <div class="choices">
+        <button
+          class="choice"
+          id="rock"
+          title="Rock"
+          onclick="startPlay(event, 'rock')"
+        >
+          🪨
+        </button>
+        <button
+          class="choice"
+          id="paper"
+          title="Paper"
+          onclick="startPlay(event, 'paper')"
+        >
+          📜
+        </button>
+        <button
+          class="choice"
+          id="scissors"
+          title="Scissor"
+          onclick="startPlay(event, 'scissor')"
+        >
+          ✂️
+        </button>
+      </div>
+
+      <button class="reset-btn" id="reset">Reset Game</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

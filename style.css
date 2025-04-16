@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  /* background: linear-gradient(135deg, #fad0c4 0%, #c599b6 100%); */
+  /* background: linear-gradient(135deg, #2c3930 0%, #3f4f44 100%); */
+  background: linear-gradient(135deg, #2d336b 0%, #7886c7 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.game-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+}
+
+.score {
+  text-align: center;
+  padding: 10px 20px;
+  flex: 1;
+}
+
+.score:first-child {
+  border-right: 2px dashed #bdbdbd;
+}
+
+.score h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #7f8c8d;
+}
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.choice {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 48px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.choice:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#rock {
+  background-image: linear-gradient(135deg, #ff676c 0%, #fca289 100%);
+}
+
+#paper {
+  background-image: linear-gradient(135deg, #3984fc 0%, #71d0fc 100%);
+}
+
+#scissors {
+  background-image: linear-gradient(135deg, #48a6a7 0%, #9acbd0 100%);
+}
+
+/* #scissors span {
+  transform: rotate(180deg);
+} */
+
+.choice img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.result {
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.result-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.round-result {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+.reset-btn {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 117, 140, 0.6);
+}
+
+.selections {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.selection-box {
+  text-align: center;
+  width: 45%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.selection-box.winner {
+  box-shadow: 0 0 0px 4px rgba(40, 167, 69, 0.3);
+}
+
+.selection-box h3 {
+  margin-bottom: 15px;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.selection-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #ecf0f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 40px;
+  /* box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.selection-icon img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+  .choices {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .choice {
+    width: 80px;
+    height: 80px;
+  }
+
+  .selections {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .selection-box {
+    width: 80%;
+  }
+}
+
+/* extra */
