@@ -2,6 +2,8 @@
 
 A simple and interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript.
 
+### 🔗 Live Demo : https://iamarpisaha.github.io/rock-paper-scissor/
+
 ![Game Screenshot](screenshot.png)
 
 ## Features
